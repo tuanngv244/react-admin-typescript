@@ -1,26 +1,16 @@
 import "@/languages/index";
-import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
-import { ELanguages } from "./constants/i18n";
-import { initLanguage, setLanguage } from "./languages";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { useTheme } from "./theme";
 
 function App() {
-  const { t } = useTranslation();
+  const theme = useTheme();
+  console.log("theme", theme);
 
-  const _onLanguageChange = (language: ELanguages) => setLanguage(language);
-
-  useEffect(() => {
-    initLanguage();
-  }, []);
   return (
-    <div>
-      {t("COMMON.save")}
-      {t("COMMON.cancel")}
-      <button onClick={() => _onLanguageChange(ELanguages.EN)}>English</button>
-      <button onClick={() => _onLanguageChange(ELanguages.VI)}>
-        Vietnamese
-      </button>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      Content
+    </ThemeProvider>
   );
 }
 
