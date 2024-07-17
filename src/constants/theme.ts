@@ -4,11 +4,11 @@ export enum ThemeMode {
 }
 
 export enum ThemeColor {
-  BLUE_THEME = "blue",
-  GREEN_THEME = "green",
-  BLACK_THEME = "black",
-  PURPLE_THEME = "purple",
-  ORANGE_THEME = "orange",
-  CYAN_THEME = "cyan",
-  AQUA_THEME = "aqua",
+  BLUE_THEME = "BLUE_THEME",
+  GREEN_THEME = "GREEN_THEME",
+  BLACK_THEME = "BLACK_THEME",
+  PURPLE_THEME = "PURPLE_THEME",
+  ORANGE_THEME = "ORANGE_THEME",
+  CYAN_THEME = "CYAN_THEME",
+  AQUA_THEME = "AQUA_THEME",
 }
