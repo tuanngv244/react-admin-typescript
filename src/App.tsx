@@ -1,15 +1,17 @@
-import "@/languages/index";
-import { CssBaseline, ThemeProvider } from "@mui/material";
 import { useTheme } from "./theme";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { useRoutes } from "react-router-dom";
+import routes from "./configs/routes";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const theme = useTheme();
-  console.log("theme", theme);
+  const routing = useRoutes(routes);
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      Content
+      <ScrollToTop>{routing}</ScrollToTop>
     </ThemeProvider>
   );
 }
