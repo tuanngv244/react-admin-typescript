@@ -1,4 +1,5 @@
 import { Paths } from "@/constants/paths";
+import tokenMethod from "@/utils/token";
 import React from "react";
 import { Navigate } from "react-router-dom";
 
@@ -11,8 +12,7 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({
   redirectTo = Paths.AUTHENTICATION,
   element,
 }) => {
-  // TODO: handle get token for condition
-  return true ? element : <Navigate to={redirectTo} replace />;
+  return tokenMethod.get() ? element : <Navigate to={redirectTo} replace />;
 };
 
 export default PrivateRoute;

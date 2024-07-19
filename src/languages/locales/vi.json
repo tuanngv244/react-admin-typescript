@@ -1,6 +1,15 @@
 {
-  "COMMON": {
-    "save": "Lưu",
-    "cancel": "Dừng"
+  "MESSAGE_ERROR": {
+    "requiredEmail": "Vui lòng nhập email!",
+    "requiredPassword": "Vui lòng nhập password!"
+  },
+  "AUTH": {
+    "welcomeToCFD": "Chào mừng đến với CFD",
+    "yourAdminDashboard": "Your Admin Dashboard",
+    "signIn": "Đăng nhập",
+    "forgotPassword?": "Quên mật khẩu ?",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "rememberThisDevice": "Ghi nhớ đăng nhập"
   }
 }

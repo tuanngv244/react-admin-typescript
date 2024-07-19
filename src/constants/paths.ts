@@ -10,6 +10,8 @@ export enum Paths {
 
   DASHBOARD = "/",
 
+  REGISTER = "/authen/register",
+
   COURSES = COURSES_BASE,
   CREATE_COURSE = `${COURSES_BASE}/create`,
   COURSE_DETAIL = `${COURSES_BASE}/:id`,

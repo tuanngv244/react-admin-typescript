@@ -9,14 +9,20 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IconMail } from "@tabler/icons-react";
 import ProfileImg from "@/assets/profile/user-1.jpg";
 import { useTranslation } from "react-i18next";
+import tokenMethod from "@/utils/token";
+import { Paths } from "@/constants/paths";
+import { useAppDispatch } from "@/store";
+import { authActions } from "@/store/auth/AuthSlice";
 
 const ProfileHeader = () => {
   const [modalSetting, setModalSetting] = useState(null);
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const showModal = (event: any) => {
     setModalSetting(event.currentTarget);
   };
@@ -25,7 +31,9 @@ const ProfileHeader = () => {
   };
 
   const _onLogout = () => {
-    // Code function logout here
+    tokenMethod.remove();
+    dispatch(authActions.reset());
+    navigate(Paths.AUTHENTICATION);
   };
 
   return (

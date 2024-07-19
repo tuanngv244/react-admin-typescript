@@ -1,6 +1,15 @@
 {
-  "COMMON": {
-    "save": "save",
-    "cancel": "cancel"
+  "MESSAGE_ERROR": {
+    "requiredEmail": "Please typing email!",
+    "requiredPassword": "Please typing password!"
+  },
+  "AUTH": {
+    "welcomeToCFD": "Welcome to CFD",
+    "yourAdminDashboard": "Your Admin Dashboard",
+    "signIn": "Sign in",
+    "forgotPassword?": "Forgot Password ?",
+    "email": "Email",
+    "password": "Password",
+    "rememberThisDevice": "Remeber this device"
   }
 }

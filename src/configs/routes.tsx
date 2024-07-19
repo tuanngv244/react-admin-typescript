@@ -5,9 +5,10 @@ import withSuspenseLoader from "@/hocs/withSuspenseLoader";
 import PrivateRoute from "@/components/PrivateRoute";
 import MenuLayout from "@/layouts/MenuLayout";
 import BlankLayout from "@/layouts/BlankLayout";
+import AuthenLayout from "@/layouts/AuthenLayout";
 // Authentication
-const Authentication = withSuspenseLoader(
-  lazy(() => import("../pages/Authentication"))
+const Login = withSuspenseLoader(
+  lazy(() => import("../pages/Authentication/Login"))
 );
 // Dashboard
 const Dashboard = withSuspenseLoader(lazy(() => import("../pages/Dashboard")));
@@ -64,7 +65,17 @@ const routes: RouteObject[] = [
     path: Paths.ROOT,
     element: <BlankLayout />,
     children: [
-      { path: Paths.AUTHENTICATION, element: <Authentication /> },
+      {
+        path: Paths.AUTHENTICATION,
+        element: <AuthenLayout />,
+        children: [
+          {
+            index: true,
+            path: Paths.AUTHENTICATION,
+            element: <Login />,
+          },
+        ],
+      },
       { path: Paths.STATUS_404, element: <Status404 /> },
       { path: "*", element: <Navigate to={Paths.STATUS_404} /> },
     ],

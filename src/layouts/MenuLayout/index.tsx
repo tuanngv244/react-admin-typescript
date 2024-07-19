@@ -1,11 +1,13 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { styled, Container, Box, useTheme } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { AppState } from "@/store";
+import { AppState, useAppDispatch } from "@/store";
 import Header from "@/components/Header";
 import Customizer from "@/components/Customizer";
 import Sidebar from "@/components/Sidebar";
+import tokenMethod from "@/utils/token";
+import { authActions } from "@/store/auth/AuthSlice";
 
 const MainWrapper = styled("div")(() => ({
   display: "flex",
@@ -30,6 +32,13 @@ const ContainerStyled = styled(Container)({
 const MenuLayout: FC = () => {
   const customizer = useSelector((state: AppState) => state.customizer);
   const theme = useTheme();
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (tokenMethod.get()?.id) {
+      dispatch(authActions.handleGetProfile(tokenMethod.get().id));
+    }
+  }, []);
   return (
     <MainWrapper>
       {/* Sidebar */}
