@@ -1,5 +1,25 @@
+import { UseFormReturn } from "react-hook-form";
 import { IQuery } from "./general";
 import { CreateUpdateUser } from "./user";
+
+export interface ICourseFormData {
+  name: string;
+  title: string;
+  startDate?: string;
+  endDate?: string;
+  duration: number;
+  tags: string[];
+  price: number;
+  link: string;
+  schedule?: ISchedule;
+  content: Array<{ title: string; description: string }>;
+  required: string[];
+  teams: string[];
+  description: string;
+  active: boolean;
+  sortOrder: number;
+  image?: string | File;
+}
 
 export interface ICourseQuery extends IQuery {}
 
@@ -58,3 +78,9 @@ export enum ECourseTypes {
   "ONLINE" = "Online",
   "OFFLINE" = "Offline",
 }
+
+export type TCreateUpdateUseFormReturn = UseFormReturn<
+  ICourseFormData,
+  any,
+  ICourseFormData
+>;

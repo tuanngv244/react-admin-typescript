@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 import CustomizerReducer from "./customizer/CustomizerSlice";
+import { instructorReducer } from "./instructor/InstructorSlice";
 
 export const store = configureStore({
   reducer: {
     customizer: CustomizerReducer,
+    instructor: instructorReducer,
   },
 });
 

@@ -5,6 +5,8 @@ import routes from "./configs/routes";
 import ScrollToTop from "./components/ScrollToTop";
 import { initLanguage } from "./languages";
 import { useEffect } from "react";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 function App() {
   const theme = useTheme();
@@ -17,7 +19,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <ScrollToTop>{routing}</ScrollToTop>
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <ScrollToTop>{routing}</ScrollToTop>
+      </LocalizationProvider>
     </ThemeProvider>
   );
 }
