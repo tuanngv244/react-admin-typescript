@@ -5,5 +5,10 @@ const toUpperCaseFirstLetter = (data: string) => {
   });
   return result.join(" ");
 };
+const formatCurrency = (data: number, configs?: { type: string }) => {
+  return new Intl.NumberFormat("vi-VN", {
+    currency: configs?.type || "VND",
+  }).format(data || 0);
+};
 
-export { toUpperCaseFirstLetter };
+export { toUpperCaseFirstLetter, formatCurrency };

@@ -1,4 +1,24 @@
 {
+  "COMMON": {
+    "add": "Add",
+    "cancel": "Cancel",
+    "content": "Content",
+    "create": "Create",
+    "save": "Save",
+    "edit": "Edit",
+    "update": "Update",
+    "delete": "Delete",
+    "actions": "Actions",
+    "action": "Action",
+    "table": "Table",
+    "agree": "Agree",
+    "filter": "Filter",
+    "reset": "Reset",
+    "areYouSureWantToDelete": "Are you sure want to delete {{name}}?",
+    "areYouSureWantToDeleteSelected": "Are you sure want to delete selected?",
+    "selected": "Selected",
+    "detail": "Detail"
+  },
   "MESSAGE_ERROR": {
     "requiredEmail": "Vui lòng nhập email!",
     "requiredPassword": "Vui lòng nhập password!"
@@ -11,5 +31,34 @@
     "email": "Email",
     "password": "Mật khẩu",
     "rememberThisDevice": "Ghi nhớ đăng nhập"
+  },
+  "COURSE": {
+    "listTitle": "course",
+    "searchList": "Search for name course",
+    "createTitle": "Create course",
+    "generalInfo": "General info",
+    "content": "Content",
+    "required": "Required",
+    "schedule": "Schedule",
+    "detailTitle": "Detail course",
+    "name": "Name",
+    "types": "Types",
+    "price": "Price",
+    "teacher": "Teacher",
+    "duration": "Duration",
+    "description": "Description",
+    "link": "Link",
+    "startDate": "Start date",
+    "openingDay": "Opening Day",
+    "endDate": "End date",
+    "title": "Title",
+    "days": "Days",
+    "time": "Time",
+    "address": "Address",
+    "instructor": "Instructor",
+    "remove": "Remove",
+    "course": "Course",
+    "instructors": "Instructors",
+    "dashboardIUpdateAfter5minutes!": "Dashboard information will be updated automatically every 5 minutes!"
   }
 }
