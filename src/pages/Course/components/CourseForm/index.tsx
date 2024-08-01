@@ -80,8 +80,6 @@ const CourseForm = forwardRef(
 
     const [isEdit, setIsEdit] = useState(false);
 
-    console.log(initialDetailData, form.watch());
-
     const theme = useTheme();
     const borderColor = theme.palette.divider;
 
@@ -132,7 +130,7 @@ const CourseForm = forwardRef(
             {isEdit ? "Edit mode" : "View only mode"}
           </Typography>
         </Box>
-        <Loading isLoading={isLoading}>
+        <Loading isLoading={isLoading} styles={{ width: "100%" }}>
           <BoxFormStyled
             component={"form"}
             onSubmit={handleSubmit(_onSubmit)}
