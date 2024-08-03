@@ -2,11 +2,13 @@ import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 import CustomizerReducer from "./customizer/CustomizerSlice";
 import { instructorReducer } from "./instructor/InstructorSlice";
+import { dashboardReducer } from "./dashboard/DashboardSlice";
 
 export const store = configureStore({
   reducer: {
     customizer: CustomizerReducer,
     instructor: instructorReducer,
+    dashboard: dashboardReducer,
   },
 });
 

@@ -28,4 +28,13 @@ const transformToOptions = <D>(
   );
 };
 
-export { toUpperCaseFirstLetter, formatCurrency, transformToOptions };
+const displayNullish = (data: string | number) => {
+  return data ? data : "---";
+};
+
+export {
+  toUpperCaseFirstLetter,
+  formatCurrency,
+  transformToOptions,
+  displayNullish,
+};

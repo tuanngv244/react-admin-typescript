@@ -60,5 +60,28 @@
     "course": "Course",
     "instructors": "Instructors",
     "dashboardIUpdateAfter5minutes!": "Dashboard information will be updated automatically every 5 minutes!"
+  },
+  "DASHBOARD": {
+    "cfdDashboard": "CFD Dashboard",
+    "thisIsDashboardPage": "This is Dashboard page",
+    "totalEarnings": "Total Earnings",
+    "revenueThisYear": "Revenue this year",
+    "revenueLastYear": "Revenue last year",
+    "overviewOfRevenue": "Overview of revenue",
+    "viewAll": "View all",
+    "viewFullReport": "View full report",
+    "yearlyBreakup": "Yearly Breakup",
+    "monthlyEarnings": "Monthly Earnings",
+    "lastYear": "last year",
+    "users": "Users",
+    "subject": "Subject",
+    "phone": "Phone",
+    "date": "Date",
+    "students": "Students",
+    "courses": "Courses",
+    "type": "Type",
+    "paymentMethod": "Payment method",
+    "register": "Register",
+    "instructors": "Instructors"
   }
 }

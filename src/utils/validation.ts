@@ -5,4 +5,14 @@ const validFileTypes = (file: File, types?: string[]) => {
   return acceptTypes.includes(type);
 };
 
-export { validFileTypes };
+const shouldUpdate = (
+  oldValue?: string | object | any[],
+  newValue?: string | object | any[]
+) => {
+  if (!oldValue) return true;
+  if (typeof oldValue === "string" && typeof newValue === "string")
+    return oldValue !== newValue;
+  return JSON.stringify(oldValue)?.length !== JSON.stringify(newValue)?.length;
+};
+
+export { validFileTypes, shouldUpdate };
