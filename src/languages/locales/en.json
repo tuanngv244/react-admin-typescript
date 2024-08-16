@@ -71,7 +71,7 @@
     "viewAll": "View all",
     "viewFullReport": "View full report",
     "yearlyBreakup": "Yearly Breakup",
-    "monthlyEarnings": "Monthly Earnings",
+    "yearlyEarnings": "Yearly Earnings",
     "lastYear": "last year",
     "users": "Users",
     "subject": "Subject",
@@ -82,6 +82,7 @@
     "type": "Type",
     "paymentMethod": "Payment method",
     "register": "Register",
-    "instructors": "Instructors"
+    "instructors": "Instructors",
+    "dashboardIUpdateAfter5minutes!": "Dashboard information will be updated automatically every 5 minutes!"
   }
 }

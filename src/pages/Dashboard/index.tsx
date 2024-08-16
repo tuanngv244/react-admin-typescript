@@ -46,6 +46,7 @@ const DashboardPage: React.FC = () => {
 
   useEffect(() => {
     initChartData();
+    console.log(onAlertActions)
     onAlertActions.info(t("DASHBOARD.dashboardIUpdateAfter5minutes!"));
     const recallTime = 60000 * 5; // 5 minutes
     const timer = setInterval(() => {

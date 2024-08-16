@@ -7,6 +7,7 @@ import { initLanguage } from "./languages";
 import { useEffect } from "react";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import AlertNotification from "./components/AlertNotification";
 
 function App() {
   const theme = useTheme();
@@ -22,6 +23,7 @@ function App() {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <ScrollToTop>{routing}</ScrollToTop>
       </LocalizationProvider>
+      <AlertNotification />
     </ThemeProvider>
   );
 }

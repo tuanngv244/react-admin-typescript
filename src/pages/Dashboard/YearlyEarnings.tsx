@@ -87,7 +87,7 @@ const YearlyEarnings = () => {
 
   return (
     <DashboardCard
-      title={t("DASHBOARD.monthlyEarnings")}
+      title={t("DASHBOARD.yearlyEarnings")}
       action={
         <Fab color="secondary" size="medium">
           <IconCurrencyDollar width={24} />
